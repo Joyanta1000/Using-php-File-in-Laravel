@@ -21,6 +21,6 @@ class DB_con
     {
         $ret = mysqli_query($this->dbh, "insert into iframes (name) values('$name')");
         $_SESSION['flash_message'] = "Succefully inserted";
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        echo "<script>window.top.location.href = \"http://127.0.0.1:8081/test\";</script>";
     }
 }
